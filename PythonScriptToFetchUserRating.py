@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 import numpy as np
 import csv
-
+import time
 def make_request(user_name):
     refineResponse={}
     refineResponse["handle"]=user_name
@@ -32,9 +32,9 @@ def read_csv(userFile):
           userRespose = make_request(row[1])
           userHandleList.append(userRespose)
           print(userRespose)
-        line_count+=1
-        if(line_count==5):
-          break
+          print(line_count)
+          line_count+=1
+          time.sleep(0.3)
         df = pd.DataFrame(userHandleList)
         df.to_csv("userContestRating.csv")
 

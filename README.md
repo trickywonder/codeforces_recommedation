@@ -1,3 +1,3 @@
 # codeforces_recommedation
-#create a recommedation system to recommand question of codeforces
+#create a recommedation system to recommend question of codeforces
 #Using python
